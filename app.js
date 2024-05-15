@@ -1,6 +1,6 @@
 async function getWeather(location) {
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=344fea06af6447c092b141515241405&q=${location}&aqi=no`, { mode: 'cors' });
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=344fea06af6447c092b141515241405&q=${location}&aqi=no`, { mode: 'cors' });
 
         if (!response.ok) {
             throw new Error('Location not found');
@@ -28,7 +28,7 @@ async function getWeather(location) {
 
 async function getForecast(location) {
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=344fea06af6447c092b141515241405&q=${location}&days=8&aqi=no&alerts=no`, { mode: 'cors' });
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=344fea06af6447c092b141515241405&q=${location}&days=8&aqi=no&alerts=no`, { mode: 'cors' });
 
         if (!response.ok) {
             throw new Error('Location not found');
