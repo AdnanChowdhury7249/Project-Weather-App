@@ -1,6 +1,6 @@
 # Project-Weather-App
 
-Weather application used to show forecast from OpenWeather API.
+Weather application using OpenWeather API.
 
 Live demo: [Weather App](https://adnanchowdhury7249.github.io/Project-Weather-App/)
 
