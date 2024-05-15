@@ -1,0 +1,133 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgba(131, 174, 252, 0.8);
+    color: white;
+    font-weight: 600;
+}
+
+.content-container {
+    background-color: rgba(80, 141, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    flex-direction: column;
+    text-align: center;
+
+
+}
+
+
+.forecast-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    /* Adjusted height */
+    gap: 30px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.forecast-content::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar for Webkit browsers */
+}
+
+.forecast-content {
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+}
+
+.search-weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    /* Adjusted height */
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-weather {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    height: 40px;
+    font-size: 1rem;
+    /* Use rem units for better scalability */
+    width: 70vw;
+    /* Use vw for responsiveness */
+    max-width: 400px;
+    /* Limit the max width */
+}
+
+.weather-button {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-left: none;
+    height: 62px;
+    /* Match height with input */
+    width: 60px;
+    /* Adjust width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.weather-button img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Styling for forecast items */
+.day-forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 100px;
+    background-color: rgba(131, 174, 252, 0.8);
+}
+
+.day-forecast p {
+    margin: 5px 0;
+}
+
+.day-forecast img {
+    width: 50px;
+}
+
+.location {
+    font-size: 2rem;
+}
+
+.temperature {
+    font-size: 2rem;
+}
