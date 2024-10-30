@@ -1,133 +1,208 @@
 html,
 body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgba(131, 174, 252, 0.8);
-    color: white;
-    font-weight: 600;
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  color: white;
+  font-weight: 600;
 }
 
-.content-container {
-    background-color: rgba(80, 141, 255, 0.8);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 50%;
-    margin: 0 auto;
+/* Header styling */
+.header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1d1d;
+  font-size: 2rem;
 }
 
-.main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh;
-    flex-direction: column;
-    text-align: center;
-
-
-}
-
-
-.forecast-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
-    /* Adjusted height */
-    gap: 30px;
-    overflow-x: auto;
-    padding: 10px;
-}
-
-.forecast-content::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar for Webkit browsers */
-}
-
-.forecast-content {
-    -ms-overflow-style: none;
-    /* Hide scrollbar for IE and Edge */
-    scrollbar-width: none;
-    /* Hide scrollbar for Firefox */
-}
-
+/* Search Weather Banner */
 .search-weather {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
-    /* Adjusted height */
-    border-radius: 5px;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  /* Adjust height as needed */
+  border-radius: 5px;
+  flex-direction: column;
+  background-image: url('./beautiful-shot-green-field-white-cloudy-sky.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+  /* Add spacing below banner */
+}
+
+/* Content Container */
+.content-container {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 50%;
+  margin: 0 auto;
+  height: 50vh;
+  color: black;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  /* Add padding to create space around content */
+  max-width: 600px;
+  /* Constrain width on larger screens */
+  margin: 0 auto;
+  /* Center within container */
+}
+
+
+/* Forecast Content */
+.forecast-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+/* Styling for individual forecast items */
+
+.forecast-content::-webkit-scrollbar,
+.forecast-content {
+  scrollbar-width: none;
 }
 
 .search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  /* Ensures elements align side by side */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
 }
 
 .input-weather {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-right: none;
-    outline: none;
-    border-radius: 5px 0 0 5px;
-    height: 40px;
-    font-size: 1rem;
-    /* Use rem units for better scalability */
-    width: 70vw;
-    /* Use vw for responsiveness */
-    max-width: 400px;
-    /* Limit the max width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  /* Remove right border to blend with button */
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  /* Rounded on the left */
+  height: 50px;
+  /* Set consistent height */
+  width: 50vw;
+  color: black;
+  font-size: 1.5rem;
+  /* Adjust for readability */
+  box-sizing: border-box;
+  /* Ensures padding doesn’t affect width */
 }
 
 .weather-button {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-left: none;
-    height: 62px;
-    /* Match height with input */
-    width: 60px;
-    /* Adjust width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-left: none;
+  /* Remove left border to blend with input */
+  height: 50px;
+  /* Match input height */
+  width: 60px;
+  /* Adjust width as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  /* Rounded on the right */
+  box-sizing: border-box;
 }
 
 .weather-button img {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+
+.day-forecast p {
+  margin: 5px 0;
+}
+
+.day-forecast img {
+  width: 50px;
+}
+
+.location,
+.temperature {
+  font-size: 2rem;
+  position: relative;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  .content-container {
+    max-width: 90%;
+    /* Make content container wider on smaller screens */
+    margin-top: 10px;
+    /* Adjust top margin */
+  }
+
+  .search-weather {
+    height: auto;
+    /* Allow height to adjust based on content */
+    padding: 15px;
+  }
+
+  .input-weather {
+    width: 70vw;
+    /* Adjust input width for smaller screens */
+    font-size: 1.5rem;
+    /* Adjust font size */
+  }
+
+  .weather-button {
+    height: 52px;
+    /* Adjust button height */
+    width: 50px;
+    /* Adjust button width */
+  }
+}
+
+.weather-button img {
+  width: 20px;
+  height: 20px;
 }
 
 /* Styling for forecast items */
 .day-forecast {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    min-width: 100px;
-    background-color: rgba(131, 174, 252, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  min-width: 100px;
+  background-color: white;
 }
 
 .day-forecast p {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .day-forecast img {
-    width: 50px;
+  width: 50px;
 }
 
 .location {
-    font-size: 2rem;
+  font-size: 2rem;
+  position: relative;
 }
 
 .temperature {
-    font-size: 2rem;
+  font-size: 2rem;
 }
